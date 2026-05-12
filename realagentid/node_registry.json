@@ -1,0 +1,26 @@
+{
+  "dfcd3aa6382f1eba": {
+    "node_id": "dfcd3aa6382f1eba",
+    "mac": "1c:c3:ab:fa:ce:64",
+    "secret": "25fc5f9ba080b64898f516d94283e3b2e27da15371b59581e08326106f4f9aa3",
+    "signature": "26bac5a4e26cc86b3e8032409369b6991dc58a01b5277b5ea60c5dfc2345fd31",
+    "issued_at": "1778609434",
+    "ttl": 86400
+  },
+  "50a6b5714718a857": {
+    "node_id": "50a6b5714718a857",
+    "mac": "1c:c3:ab:fa:ce:6c",
+    "secret": "d0a4f1d06413a26e0ae2a4efa901ebd402f471e836818c28162aa11ada278cc0",
+    "signature": "b6db8601f9f0de1674f47d2a529bc2a024b7bed1e13607d643f84b4c31a98538",
+    "issued_at": "1778609434",
+    "ttl": 86400
+  },
+  "2f979ea1eae2206d": {
+    "node_id": "2f979ea1eae2206d",
+    "mac": "1c:c3:ab:f9:58:18",
+    "secret": "fe5fd688145f848b30c06fa142b6bb6eb0a1d4048e93b416f7853d1f06e79b22",
+    "signature": "191b3c6204f75c4dce7f978d2910819ee5176ed021c239d6c1512c851fd90d4b",
+    "issued_at": "1778609434",
+    "ttl": 86400
+  }
+}
