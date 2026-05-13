@@ -3,13 +3,13 @@ import urequests
 import hashlib
 import ubinascii
 import time
+import ntptime
 
 NODE_SECRET = "25fc5f9ba080b64898f516d94283e3b2e27da15371b59581e08326106f4f9aa3"
 NODE_ID = "dfcd3aa6382f1eba"
 HUB_IP = "192.168.1.124"
 HUB_PORT = 5000
 
-# Connect to WiFi first
 wlan = network.WLAN(network.STA_IF)
 wlan.active(False)
 time.sleep(2)
@@ -21,22 +21,22 @@ try:
 except:
     pass
 wlan.connect("ATTuGTqV7i_5G", b"fqmc5h=#dm3w")
+
 timeout = 0
 while not wlan.isconnected() and timeout < 60:
     time.sleep(1)
     timeout += 1
+
 if not wlan.isconnected():
     print("WiFi failed")
     raise SystemExit
 
 print("WiFi connected:", wlan.ifconfig())
-import ntptime
 try:
     ntptime.settime()
-    print("Time synced")
-    print("ESP32 time:", time.time())
+    print("Time synced:", time.time())
 except:
-    print("NTP failed, using offset")
+    print("NTP failed")
 
 def sign_message(secret, message):
     key = bytes.fromhex(secret)
