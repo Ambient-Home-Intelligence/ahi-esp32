@@ -28,7 +28,9 @@ def verify_signature(node_id, timestamp, signature):
         return False, "Node TTL expired"
 
     # Verify timestamp freshness (replay attack prevention)
-    if abs(time.time() - float(timestamp)) > 60:
+    MICROPYTHON_EPOCH_OFFSET = 946684800
+    adjusted_timestamp = float(timestamp) + MICROPYTHON_EPOCH_OFFSET
+    if abs(time.time() - adjusted_timestamp) > 300:
         return False, "Timestamp too old - possible replay attack"
 
     # Verify signature
